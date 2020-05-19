@@ -4,7 +4,7 @@ import hudson.EnvVars
 import java.net.URL
 
 node{
-    stage('Git Checkout'){
+    stage('Git Checkout1'){
         git 'https://github.com/hardeepbusyqa/TeaCup-be.git'
     }
     stage('Compile'){
