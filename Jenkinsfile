@@ -9,7 +9,7 @@ node{
     }
     stage('Switch Branch'){
         sh 'git branch -r'
-        sh 'git checkout ${params.branchname}'
+        sh "git checkout ${params.branchname}"
     }
     stage('Compile'){
         withMaven(maven: 'Maven') {
