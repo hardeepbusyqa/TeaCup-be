@@ -7,6 +7,10 @@ node{
     stage('Git Checkout1'){
         git 'https://github.com/hardeepbusyqa/TeaCup-be.git'
     }
+    stage('Switch Branch'){
+        sh 'git branch -r'
+        sh 'git checkout ${params.branchname}'
+    }
     stage('Compile'){
         withMaven(maven: 'Maven') {
         sh 'mvn compile'
